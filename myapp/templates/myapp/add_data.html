@@ -23,13 +23,20 @@
   <!-- <h1 class="alert-success text-center p-3">Student-Record-management</h1> -->
   <div class="row">
    
-
-<form action = "" method = "post">
-    {% csrf_token %}
-    {{form.as_p }}
-    
-    <input type="submit" value=Submit">
-</form>
+    <form action="" method="post" enctype="multipart/form-data" class="shadow p-5">
+     {% csrf_token %}
+     {% for fm in form %}
+       <div class="form-group mb-3">
+       {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+       </div>
+     {% endfor %}
+     <input type="submit" value="Submit" class="btn btn-primary">
+     {% if form.non_field_errors %}
+       {% for error in form.non_field_errors %}
+        <p class="alert alert-danger my-3">{{error}}</p>
+       {% endfor %}
+     {% endif %}
+    </form>
    </div>
    
   </div>

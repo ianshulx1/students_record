@@ -77,7 +77,7 @@ class Student_data(models.Model):
  charactor_certificate = models.FileField(upload_to='d/5', blank=True)
  mark10 = models.FileField(upload_to='d/6', blank=True)
  mark12 = models.FileField(upload_to='d/7', blank=True)
- mark_graduation=models.FileField(upload_to='d/7', blank=True)
+ mark_graduation=models.FileField(upload_to='d/8', blank=True)
 
 
 
