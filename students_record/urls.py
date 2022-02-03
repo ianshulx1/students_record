@@ -3,7 +3,8 @@ from django.urls import path, include
 from myapp import views
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.views.static import serve
+from django.conf import settings
 
 admin.site.site_header = "Students Records Management"
 admin.site.site_title = "Welcome to admin Dashboard"
@@ -21,7 +22,10 @@ urlpatterns = [
     path('add', views.HomeView.as_view(), name='adddata'),
     path('delete/<int:id>/', views.delete_data, name='deletedata'),
     path('<int:id>/', views.update_data, name='updatedata'),
-    path('app/<int:pk>', views.application_form, name='application')
+    path('app/<int:pk>', views.application_form, name='application'),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
