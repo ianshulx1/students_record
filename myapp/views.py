@@ -24,7 +24,7 @@ class HomeView(View):
   form = Student_data_form(request.POST, request.FILES)
   if form.is_valid():
    form.save()
-   return HttpResponseRedirect('list')
+   return redirect('list')
 
    
 @login_required
