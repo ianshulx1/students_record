@@ -33,6 +33,10 @@ def application_form(request, pk):
   return render(request, 'myapp/candidate.html', {'candidate':candidate})
 
 
+def edit(request):
+    return HttpResponseRedirect('https://ianshulx.pythonanywhere.com/admin/')
+
+
 
 
 
