@@ -55,7 +55,7 @@ class Student_data(models.Model):
  department = models.CharField(choices=DEPARTMENT_CHOICE, max_length=50, blank=True)
 
  mobile = models.PositiveIntegerField()
- mobile2 = models.PositiveIntegerField(null=True, blank=True)
+ mobile2 = models.PositiveIntegerField(blank=True)
  email = models.EmailField(null=True, blank=True)
  
 
