@@ -27,9 +27,9 @@
 
      <p class="float"> <b> Registration No: {{candidate.id}} </b></p>
      <p>Name: <b> {{candidate.first_name  }} {{candidate.middle_name}} {{candidate.last_name}} </b> </p>
-     <p>Fathers Name: <b>{{candidate.fathers_name}} </b> Fathers Occupation: <b> {{candidate.fathers_occupation}} </b></p></p>
+     <p>Fathers Name: <b>{{candidate.fathers_name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> Fathers Occupation: <b> {{candidate.fathers_occupation}} </b></p></p>
      
-     <p>Mothers Name: <b> {{candidate.mothers_name}} </b>>Mothers Occupation:  <b> {{candidate.fathers_occupation}} </b> </p>
+       <p>Mothers Name: <b> {{candidate.mothers_name}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>Mothers Occupation:  <b> {{candidate.mothers_occupation}} </b> </p>
      
      <p>Category: <b>{{candidate.category}}</b></p>
 
@@ -37,15 +37,15 @@
      <p>Gender: <b> {{candidate.gender}} </b></p>
 
      <p>Full Address: <b>{{candidate.address}}</b></p>
-     <p>City: <b> {{candidate.city}} </b> Pincode <b>:      {{candidate.pin}} </b> </p>
+     <p>City: <b> {{candidate.city}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pincode <b>:      {{candidate.pin}} </b> </p>
      
      
 
-     <p><u> Mobile No: </u><b> {{candidate.mobile}} </b><u> Father's Mobile No </u>  : <b> {{candidate.mobile2}} </b></p>
+     <p><u> Mobile No: </u><b> {{candidate.mobile}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u> Father's Mobile No </u>  : <b> {{candidate.mobile2}} </b></p>
       
      <p> <u> Email ID : </u> <b> {{candidate.email}}</b></p>
-     <p><u>Adhaar Card Number : </u> <b>{{candidate.Adhaar_no}}</b></p>
-     <p><u>PAN Card Number : </u> <b>{{candidate.pan_no}}</b></p>
+     <p><u>Adhaar Card Number : </u> <b>{{candidate.Adhaar_no}}</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <u>PAN Card Number : </u> <b>{{candidate.pan_no}}</b></p>
+    
 
       
     
@@ -69,20 +69,20 @@
           <td>{{candidate.mark10_obtained}}</td>
           <td>{{candidate.mark10_total}}</td>
 
-          <td><a href="media/{{candidate.mark10}}" download="media/{{candidate.mark10}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+          <td><a href="/media/{{candidate.mark10}}" download="media/{{candidate.mark10}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
           
         </tr>
         <tr>
           <th scope="row">12th</th>
           <td>{{candidate.mark12_obtained}}</td>
           <td>{{candidate.mark12_total}}</td>
-          <td><a href="media/{{candidate.mark12}}" download="media/{{candidate.mark12}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+          <td><a href="/media/{{candidate.mark12}}" download="media/{{candidate.mark12}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
         </tr>
         <tr>
-          <th scope="row">Graduation (MBA only)</th>
+          <th scope="row">Graduation (MBA onlyy)</th>
           <td>{{candidate.mark_graduation_obtained}}</td>
           <td>{{candidate.mark_graduation_total}}</td>
-          <td><a href="media/{{candidate.mark_graduation}}" download="media/{{candidate.mark_graduation}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+          <td><a href="/media/{{candidate.mark_graduation}}" download="media/{{candidate.mark_graduation}}">Download<i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
           
         </tr>
       </tbody>
@@ -91,21 +91,81 @@
 
 
     </div>
+    <p></p>
 
+    <div class="form-control">
+      
+    <h3 class="alert alert-primary">Documents</h3>
+
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Documents</th>
+          <th scope="col">Download link</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Adhaar Card</td>
+          <td><a href="/media/{{candidate.Adhaar}}" download="media/{{candidate.Adhaar}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i> </a></td>
+          
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>PAN Card</td>
+          <td><a href="/media/{{candidate.pan}}" download="media/{{candidate.pan}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+          
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Income Cetificate</td>
+          <td><a href="/media/{{candidate.income}}" download="media/{{candidate.income}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Caste Cetificate</td>
+          <td><a href="/media/{{candidate.caste}}" download="media/{{candidate.caste}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Charactor Certificate</td>
+          <td><a href="/media/{{candidate.charactor_certificate}}" download="media/{{candidate.charactor_certificate}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Signature</td>
+          <td><a href="/media/{{candidate.sign}}" download="media/{{candidate.sign}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>10th Marksheet</td>
+          <td><a href="/media/{{candidate.mark10}}" download="media/{{candidate.mark10}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>12th Marksheet</td>
+          <td><a href="/media/{{candidate.mark12}}"download="media/{{candidate.mark12}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Graduation Marksheet</td>
+          <td><a href="/media/{{candidate.mark_graduation}}"download="media/{{candidate.mark_graduation}}">Download File <i class="bi bi-file-earmark-arrow-down-fill"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
      
-     <p>Adhaar Card: <a href="/media/{{candidate.Adhaar}}" download="media/{{candidate.Adhaar}}">Download File </a></p>
-     <p>PAN Card: <a href="media/{{candidate.pan}}" download="media/{{candidate.pan}}">Download File</a></p>
-     <p>10th Marksheet: <a href="media/{{candidate.mark10}}" download="media/{{candidate.mark10}}">Download File</a></p>
-     <p>12th Marksheet: <a href="media/{{candidate.mark12}}"download="media/{{candidate.mark12}}">Download File</a></p>
-     <p>Income Cetificate: <a href="media/{{candidate.income}}" download="media/{{candidate.income}}">Download File</a></p>
-     <p>Caste Certificate: <a href="media/{{candidate.caste}}" download="media/{{candidate.caste}}">Download File</a></p>
-     <p>Charactor Certificate: <a href="media/{{candidate.charactor_certificate}}" download="media/{{candidate.charactor_certificate}}">Download File</a></p>
-     <p>Signature: <a href="media/{{candidate.sign}}" download="media/{{candidate.sign}}">Download File</a></p>
+    
+     
    
 
     <div class="text-center">
      <a href="/" class="btn btn-danger">Back to Home</a>
      <a onClick="window.print()" class="btn btn-info">Print this page</a>
+    </div>
     
     </div>
     </div>

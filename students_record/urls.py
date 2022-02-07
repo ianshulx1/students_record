@@ -23,7 +23,7 @@ urlpatterns = [
     path('delete/<int:id>/', views.delete_data, name='deletedata'),
     path('<int:id>/', views.update_data, name='updatedata'),
     path('app/<int:pk>', views.application_form, name='application'),
-    path('edit', views.edit, name='edit'),
+   
 
  
 

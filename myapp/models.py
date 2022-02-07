@@ -42,21 +42,21 @@ class Student_data(models.Model):
  pin = models.PositiveIntegerField()
  course = models.CharField(choices=COURSE_CHOICE, max_length=100)
 
- mark10_obtained = models.PositiveIntegerField(null=True, blank=True)
- mark10_total = models.PositiveIntegerField( null=True, blank=True)
+ mark10_obtained = models.PositiveIntegerField(blank=True)
+ mark10_total = models.PositiveIntegerField( blank=True)
 
- mark12_obtained = models.PositiveIntegerField(null=True, blank=True)
- mark12_total = models.PositiveIntegerField(null=True, blank=True)
+ mark12_obtained = models.PositiveIntegerField( blank=True)
+ mark12_total = models.PositiveIntegerField(blank=True)
  
 
- mark_graduation_obtained = models.PositiveIntegerField(null=True, blank=True)
- mark_graduation_total = models.PositiveIntegerField(null=True, blank=True)
+ mark_graduation_obtained = models.PositiveIntegerField(blank=True)
+ mark_graduation_total = models.PositiveIntegerField(blank=True)
 
  department = models.CharField(choices=DEPARTMENT_CHOICE, max_length=50, blank=True)
 
  mobile = models.PositiveIntegerField()
  mobile2 = models.PositiveIntegerField(blank=True)
- email = models.EmailField(null=True, blank=True)
+ email = models.EmailField(blank=True)
  
 
 
