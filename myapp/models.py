@@ -63,22 +63,22 @@ class Student_data(models.Model):
 # DOCUMENTS
 
 
- photo = models.ImageField(upload_to='d/1', blank=True, null=True)
- sign = models.ImageField(upload_to='d/8', blank=True, null=True)
+ photo = models.ImageField(upload_to='d/1', blank=True)
+ sign = models.ImageField(upload_to='d/8', blank=True)
 
- Adhaar = models.FileField(upload_to='d/2', blank=True, null=True)
+ Adhaar = models.FileField(upload_to='d/2', blank=True)
  Adhaar_no = models.CharField(max_length=12, blank=True)
 
- pan = models.FileField(upload_to='d/3', blank=True, null=True)
+ pan = models.FileField(upload_to='d/3', blank=True)
  pan_no = models.CharField(max_length=10,  blank=True)
 
- caste = models.FileField(upload_to='d/3', blank=True, null=True)
- address_certificate = models.FileField(upload_to='d/3', blank=True, null=True)
- income = models.FileField(upload_to='d/4', blank=True, null=True)
+ caste = models.FileField(upload_to='d/3', blank=True)
+ income = models.FileField(upload_to='d/4', blank=True)
  charactor_certificate = models.FileField(upload_to='d/5', blank=True)
- mark10 = models.FileField(upload_to='d/6', blank=True, null=True)
- mark12 = models.FileField(upload_to='d/7', blank=True, null=True)
- mark_graduation=models.FileField(upload_to='d/8', blank=True, null=True)
+ mark10 = models.FileField(upload_to='d/6', blank=True)
+ mark12 = models.FileField(upload_to='d/7', blank=True)
+ mark_graduation=models.FileField(upload_to='d/8', blank=True)
+
 
 
     

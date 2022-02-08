@@ -119,7 +119,7 @@ def signup(request):
         
         myuser.is_active = False
         myuser.save()
-        messages.success(request, "Your Account has been created succesfully!! please contact admins to activate your account")
+        messages.success(request, "Your Account has been created succesfully!! please admins to activate your account")
 
         
         return redirect(signin)

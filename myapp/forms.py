@@ -21,8 +21,8 @@ class Student_data_form(forms.ModelForm):
  category = forms.ChoiceField(label='Category', choices=CATEGORY, widget=forms.RadioSelect)
  class Meta:
   model = Student_data
-  fields = ['first_name', 'middle_name', 'last_name', 'fathers_name', 'fathers_occupation', 'mothers_name','mothers_occupation', 'dob', 'gender', 'category','address', 'city', 'pin','mobile', 'mobile2', 'email',  'course', 'department', 'mark10', 'mark10_obtained' , 'mark10_total', 'mark12',  'mark12_obtained' , 'mark12_total', 'mark_graduation', 'mark_graduation_obtained' , 'mark_graduation_total' , 'photo', 'sign', 'Adhaar', 'Adhaar_no' ,'pan', 'pan_no', 'caste', 'income', 'address_certificate' ,'charactor_certificate']
-  labels = {'first_name':'First Name', 'middle_name':'Middle Name', 'last_name':'Last Name' ,'fathers_name': 'Fathers Name' ,'fathers_occupation': 'Fathers occupation' , 'mothers_occupation': 'Mothers occupation' , 'dob': 'Date of Birth', 'pin':'Pin Code', 'mobile':'Mobile No.', 'mobile2':'Fathers mobile no.', 'email':'Email ID', 'photo':'Students Image', 'Adhaar':'Adhaar Card', 'pan':'Pan Card', 'caste':'Caste Certificate', 'income':'Income Certificate', 'charactor_certificate': 'Charactor Certificate', 'mark10': '10th Marksheet', 'mark12': '12th Marksheet', 'mark10_obtained':'Obtained marks in 10th', 'mark10_total':'Total marks in 10th','mark12_obtained':'Obtained marks in 12th' , 'mark12_total':'Total marks in 12th', 'mark_graduation_obtained':'Obtained marks in graduation' , 'mark_graduation_total':'Total marks in graduation', 'mark_graduation':'Graduation degree (Only MBA students)', 'address_certificate':'Address Certificate'}
+  fields = ['first_name', 'middle_name', 'last_name', 'fathers_name', 'fathers_occupation', 'mothers_name','mothers_occupation', 'dob', 'gender', 'category','address', 'city', 'pin','mobile', 'mobile2', 'email',  'course', 'department', 'mark10', 'mark10_obtained' , 'mark10_total', 'mark12',  'mark12_obtained' , 'mark12_total', 'mark_graduation', 'mark_graduation_obtained' , 'mark_graduation_total' , 'photo', 'sign', 'Adhaar', 'Adhaar_no' ,'pan', 'pan_no', 'caste', 'income', 'charactor_certificate']
+  labels = {'first_name':'First Name', 'middle_name':'Middle Name', 'last_name':'Last Name' ,'fathers_name': 'Fathers Name' ,'fathers_occupation': 'Fathers occupation' , 'mothers_occupation': 'Mothers occupation' , 'dob': 'Date of Birth', 'pin':'Pin Code', 'mobile':'Mobile No.', 'mobile2':'Fathers mobile no.', 'email':'Email ID', 'photo':'Students Image', 'Adhaar':'Adhaar Card', 'pan':'Pan Card', 'caste':'Caste Certificate', 'income':'Income Certificate', 'charactor_certificate': 'Charactor Certificate', 'mark10': '10th Marksheet', 'mark12': '12th Marksheet', 'mark10_obtained':'Obtained marks in 10th', 'mark10_total':'Total marks in 10th','mark12_obtained':'Obtained marks in 12th' , 'mark12_total':'Total marks in 12th', 'mark_graduation_obtained':'Obtained marks in graduation' , 'mark_graduation_total':'Total marks in graduation', 'mark_graduation':'Graduation degree (Only MBA students)'}
   
   
   widgets = {
@@ -57,7 +57,6 @@ class Student_data_form(forms.ModelForm):
    'pan_no':forms.TextInput(attrs={'class':'form-control'}),
    'caste':forms.FileInput(attrs={'class':'form-control'}),
    'income':forms.FileInput(attrs={'class':'form-control'}),
-   'address_certificate':forms.FileInput(attrs={'class':'form-control'}),
    'charactor_certificate':forms.FileInput(attrs={'class':'form-control'}),
 
 
