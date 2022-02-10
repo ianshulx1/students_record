@@ -1,5 +1,7 @@
 import re
 from turtle import home
+from urllib import response
+from django.http import HttpResponse
 from django.shortcuts import redirect, render,HttpResponseRedirect
 from .forms import Student_data_form
 from .models import Student_data
@@ -9,7 +11,7 @@ from . tokens import generate_token
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
-
+import csv
 
 
 
@@ -34,8 +36,19 @@ def application_form(request, pk):
 
 
 
+def export(request):
+    response = HttpResponse(content_type='text/scv')
+    writer = csv.writer(response)
+    writer.writerow(['First Name', 'Last Name', 'Middle Name', 'Fathers Name', 'Date Of Birth', 'Category',  'City', 'Mobile','Course','Department','Lateral Entry','Photo', 'Adhaar','Adhaar No.', 'PAN','PAN No.' ,'10th Marksheet', '12th Marksheet', 'Diploma Marksheet', 'Degree', 'Income Cerificate', 'Caste Certificate', 'Character Certificate' ])
+    
+
+    for student in Student_data.objects.all().values_list('first_name', 'last_name', 'middle_name', 'fathers_name', 'dob', 'category', 'city', 'mobile', 'course','department','lateral' , 'photo', 'Adhaar','Adhaar_no', 'pan','pan_no', 'mark10','mark12', 'mark_diploma', 'mark_graduation','income', 'caste', 'charactor_certificate' ):
+        writer.writerow(student)
+
+    response['Content-Disposition']= ' attachment; filename="studentsdata.csv" '
 
 
+    return response
 
 
 

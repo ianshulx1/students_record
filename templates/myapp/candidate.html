@@ -27,21 +27,21 @@
 
      <p class="float"> <b> Registration No: {{candidate.id}} </b></p>
      <p>Name: <b> {{candidate.first_name  }} {{candidate.middle_name}} {{candidate.last_name}} </b> </p>
-     <p>Fathers Name: <b>{{candidate.fathers_name}} </b> Fathers Occupation: <b> {{candidate.fathers_occupation}} </b></p></p>
+     <p>Fathers Name: <b>{{candidate.fathers_name}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fathers Occupation: <b> {{candidate.fathers_occupation}} </b></p></p>
      
-     <p>Mothers Name: <b> {{candidate.mothers_name}} </b>>Mothers Occupation:  <b> {{candidate.fathers_occupation}} </b> </p>
+     <p>Mothers Name: <b> {{candidate.mothers_name}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mothers Occupation:  <b> {{candidate.mothers_occupation}} </b> </p>
+     <p>Date of Birth: <b>{{candidate.dob}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender: <b> {{candidate.gender}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Category: <b>{{candidate.category}}</b></p>
      
-     <p>Category: <b>{{candidate.category}}</b></p>
 
-     <p>Date of Birth: <b>{{candidate.dob}} </b></p>
-     <p>Gender: <b> {{candidate.gender}} </b></p>
+     
+     
 
      <p>Full Address: <b>{{candidate.address}}</b></p>
-     <p>City: <b> {{candidate.city}} </b> Pincode <b>:      {{candidate.pin}} </b> </p>
+     <p>City: <b> {{candidate.city}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State <b>:      {{candidate.state}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pincode <b>:      {{candidate.pin}} </b> </p>
      
      
 
-     <p><u> Mobile No: </u><b> {{candidate.mobile}} </b><u> Father's Mobile No </u>  : <b> {{candidate.mobile2}} </b></p>
+     <p><u> Mobile No: </u><b> {{candidate.mobile}} </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u> Father's Mobile No </u>  : <b> {{candidate.mobile2}} </b></p>
       
      <p> <u> Email ID : </u> <b> {{candidate.email}}</b></p>
      <p><u>Adhaar Card Number : </u> <b>{{candidate.Adhaar_no}}</b></p>
@@ -52,13 +52,14 @@
      
 
     <h3 class="alert alert-info">Educational Details</h3>
-    <p><u>Course & Department :</u> <b>{{candidate.course}}  ({{candidate.department}})</b> </p> 
+    <p><u>Course & Department :</u> <b>{{candidate.course}}  ({{candidate.department}})</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Lateral entry :</u> <b>{{candidate.lateral}} </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Session :</u> <b>({{candidate.session_start}}-{{candidate.session_end}}) </b></p> 
     <table class="table table-bordered">
       <thead>
         <tr>
           <th scope="col">Class</th>
           <th scope="col">Obtained Marks</th>
           <th scope="col">Total Marks</th>
+          <th scope="col">Download Marksheet</th>
           
         </tr>
       </thead>
@@ -67,17 +68,26 @@
           <th scope="row">10th</th>
           <td>{{candidate.mark10_obtained}}</td>
           <td>{{candidate.mark10_total}}</td>
+          <td><a href="/media/{{candidate.mark10}}" download="media/{{Student_data.mark10}}">Download File</a></td>
           
         </tr>
         <tr>
           <th scope="row">12th</th>
           <td>{{candidate.mark12_obtained}}</td>
           <td>{{candidate.mark12_total}}</td>
+          <td><a href="/media/{{candidate.mark12}}" download="media/{{Student_data.mark12}}">Download File</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Diploma (B.tech lateral only)</th>
+          <td>{{candidate.mark_diploma_obtain}}</td>
+          <td>{{candidate.mark_diploma_total}}</td> 
+          <td><a href="/media/{{candidate.mark_diploma}}" download="media/{{Student_data.mark_diploma}}">Download File</a></td>
         </tr>
         <tr>
           <th scope="row">Graduation (MBA only)</th>
           <td>{{candidate.mark_graduation_obtained}}</td>
           <td>{{candidate.mark_graduation_total}}</td>
+          <td><a href="/media/{{candidate.mark_graduation}}" download="media/{{Student_data.mark_graduation}}">Download File</a></td>
           
         </tr>
       </tbody>
@@ -89,13 +99,12 @@
 
      
      <p>Adhaar Card: <a href="/media/{{candidate.Adhaar}}" download="media/{{Student_data.Adhaar}}">Download File </a></p>
-     <p>PAN Card: <a href="media/{{candidate.pan}}" download="media/{{Student_data.pan}}">Download File</a></p>
-     <p>10th Marksheet: <a href="media/{{candidate.mark10}}" download="media/{{Student_data.mark10}}">Download File</a></p>
-     <p>12th Marksheet: <a href="media/{{candidate.mark12}}"download="media/{{Student_data.mark12}}">Download File</a></p>
-     <p>Income Cetificate: <a href="media/{{candidate.income}}" download="media/{{Student_data.income}}">Download File</a></p>
-     <p>Caste Certificate: <a href="media/{{candidate.caste}}" download="media/{{Student_data.caste}}">Download File</a></p>
-     <p>Charactor Certificate: <a href="media/{{candidate.charactor_certificate}}" download="media/{{Student_data.charactor_certificate}}">Download File</a></p>
-     <p>Signature: <a href="media/{{candidate.sign}}" download="media/{{Student_data.sign}}">Download File</a></p>
+     <p>PAN Card: <a href="/media/{{candidate.pan}}" download="media/{{Student_data.pan}}">Download File</a></p>
+    
+     <p>Income Cetificate: <a href="/media/{{candidate.income}}" download="media/{{Student_data.income}}">Download File</a></p>
+     <p>Caste Certificate: <a href="/media/{{candidate.caste}}" download="media/{{Student_data.caste}}">Download File</a></p>
+     <p>Charactor Certificate: <a href="/media/{{candidate.charactor_certificate}}" download="media/{{Student_data.charactor_certificate}}">Download File</a></p>
+     <p>Signature: <a href="/media/{{candidate.sign}}" download="media/{{Student_data.sign}}">Download File</a></p>
    
 
     <div class="text-center">
